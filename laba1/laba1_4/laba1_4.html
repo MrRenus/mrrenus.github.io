@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация атрибутов img</title>
+</head>
+<body>
+
+    <h1>Демонстрация атрибутов элемента img</h1>
+
+    <h2>1. Базовое изображение</h2>
+    <figure>
+        <img src="./picha/globus.gif" alt="gif globus">
+        <figcaption>Атрибут alt задаёт альтернативный текст.</figcaption>
+    </figure>
+
+    <h2>2. Изменение размеров</h2>
+    <figure>
+        <img src="./picha/globus.gif" alt="Масштабированное изображение" width="200" height="150">
+        <figcaption>Использование width и height для задания размеров.</figcaption>
+    </figure>
+
+    <h2>3. Responsive изображение</h2>
+    <figure>
+        <img src="./picha/globus.gif" alt="Адаптивное изображение" srcset="./picha/globus.gif 480w, ./picha/globus.gif 1080w" sizes="(max-width: 600px) 480px, 1080px">
+        <figcaption>Атрибуты srcset и sizes для адаптации под разные устройства.</figcaption>
+    </figure>
+
+    <h2>4. Использование picture</h2>
+    <figure>
+        <picture>
+            <source srcset="./picha/mushroom.jpg" media="(max-width: 600px)">
+            <source srcset="./picha/mushroom_landscape.jpg" media="(max-width: 700px)">
+			<source srcset="./picha/mushroom_retina.jpg" media="(min-width: 701px)">
+
+            <img src="./picha/mushroom_portrait.jpg" alt="Изображение с picture">
+        </picture>
+        <figcaption>Элемент picture выбирает изображение в зависимости от экрана.</figcaption>
+    </figure>
+
+</body>
+</html>
