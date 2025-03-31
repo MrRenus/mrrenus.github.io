@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Документ с изображением и ссылками</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <img src="./logo.png" alt="logo" usemap="#image-map">
+    <map name="image-map">
+        <!-- Пример с корректировкой атрибута target и coords -->
+        <area alt="" title="" href="./lab1_1.html" coords="-3,91,141,183" shape="rect">
+        <area alt="" title="" href="./lab1_2.html" coords="140,91,366,171" shape="rect">
+        <area alt="" title="" href="./lab1_3/laba1_3.html" coords="-7,-8,142,94" shape="rect">
+        <area alt="" title="" href="./laba1_4/laba1_4.html" coords="139,-15,290,92" shape="rect">
+    </map>
+</body>
+</html>
