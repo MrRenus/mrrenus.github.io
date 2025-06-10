@@ -7,13 +7,26 @@
     <style>
         #text {
             font-size: 20px;
-            margin: 20px 0;
+            margin: 20px;
+        }
+
+        #toggleButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
 
-<div id="text">Тут должен быть наш текст</div>
+<div id="text">
+    Текст.<br><br>
+    Много текста для теста прокрутки.<br><br>
+</div>
+
 <button id="toggleButton">Скрыть текст</button>
 
 <script>
