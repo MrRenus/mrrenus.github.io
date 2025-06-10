@@ -13,18 +13,24 @@
         #toggleButton {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;      /* фиксированная ширина */
+            height: 50px;      /* фиксированная высота */
             font-size: 16px;
-            z-index: 1000;
+            text-align: center;
+            white-space: nowrap;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 50px; /* для вертикального выравнивания текста */
         }
     </style>
 </head>
 <body>
 
 <div id="text">
-    Текст.<br><br>
-    Много текста для теста прокрутки.<br><br>
+    Текст<br><br>
+    Много текста для проверки прокрутки.
 </div>
 
 <button id="toggleButton">Скрыть текст</button>
@@ -32,7 +38,7 @@
 <script>
     const textElement = document.getElementById('text');
     const toggleButton = document.getElementById('toggleButton');
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', function () {
         if (textElement.style.display === 'none') {
             textElement.style.display = 'block';
             toggleButton.textContent = 'Скрыть текст';
