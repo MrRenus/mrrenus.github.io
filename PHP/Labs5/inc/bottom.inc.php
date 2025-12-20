@@ -1,1 +1,0 @@
-&copy; Пупупу, 2000 &ndash; <?=getdate()['year']?>
